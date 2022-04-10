@@ -61,7 +61,7 @@ public class Project08 {
     }
 
 
-    //Solution without regex
+    //Task-4 without regex
     public static boolean validateEmail(String str){
         if(str.contains(" ") || !str.contains("@") || !str.contains(".") || str.length() < 8 ||
                 (str.indexOf("@") != str.lastIndexOf("@"))) return false;
