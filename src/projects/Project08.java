@@ -37,10 +37,9 @@ public class Project08 {
         }
     }
 
-    //Task-4
+    //Task-4 -- 1st logic
     public static boolean validateEmailAddress(String email) {
-        if (email.contains(" ") || !email.contains(".")) return false;
-
+        if (email.contains(" ") || !email.contains(".") || !email.contains("@") || email.length() < 8) return false;
         else {
             int count = 0;
             for (int i = 0; i < email.length(); i++) {
@@ -59,5 +58,16 @@ public class Project08 {
                 return front && middle && end;
             }
         }
+    }
+
+
+    //Solution without regex
+    public static boolean validateEmail(String str){
+        if(str.contains(" ") || !str.contains("@") || !str.contains(".") || str.length() < 8 ||
+                (str.indexOf("@") != str.lastIndexOf("@"))) return false;
+
+        return str.substring(0, str.indexOf("@")).length() >= 2 &&
+                str.substring(str.indexOf("@")+1, str.indexOf(".")).length() >= 2 &&
+                str.substring(str.lastIndexOf(".")+1).length() >= 2;
     }
 }
