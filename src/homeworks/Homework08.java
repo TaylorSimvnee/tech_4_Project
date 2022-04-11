@@ -1,7 +1,5 @@
 package homeworks;
 
-import utilities.MyMethods;
-
 import java.util.Scanner;
 
 public class Homework08 {
@@ -21,6 +19,14 @@ public class Homework08 {
         else if (number>=26 && number<=50) System.out.println(number + " is in the 1st half\n"+ number + " is in the 2nd quarter");
         else if (number>51 && number<=75) System.out.println(number + " is in the 2nd half\n" + number + " is in the 3rd quarter");
         else System.out.println(number + " is in the 2nd half\n" + number + " is in the 4th quarter");
+
+        //New- clearer logic
+        System.out.println(number);
+        if(number < 26) System.out.println("1st quart");
+        else if(number < 51) System.out.println("2nd quart");
+        else if(number < 75) System.out.println("3rd quart");
+        else System.out.println("4th quart");
+        System.out.println(number < 51 ? number + " is in the 1st half" : number + " is in the 2nd half");
 
         ////////Task-3////////
         Scanner scan = new Scanner(System.in);
