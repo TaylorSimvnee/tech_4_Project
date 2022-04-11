@@ -5,6 +5,9 @@ public class FindingRandom {
 
         double random = Math.random();
 
+        //formula for random:
+       // (int) (Math.random() * (endPoint - startPoint + 1) + startPoint)
+
         double random0And10Included= Math.random() * 11; //0-10
 
         System.out.println(random);

@@ -22,6 +22,11 @@ public class ExerciseMathRandom {
         Create a program which is generating two random number between 67 - 85
         and print out numb 1 and numb 2 and max and min.
 
+        67 - 85   (Math.random * 19) + 67
+        3 - 25    (Math.random * 23) + 3
+        25 - 35   (Math.random * 11) + 25
+        50 - 200  (Math.random * 151) + 50
+
         */
 
         int random1 = (int) (Math.random() * 19 + 67);

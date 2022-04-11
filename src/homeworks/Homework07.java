@@ -143,6 +143,10 @@ public class Homework07 {
         if (Random1>25 && Random2>25 && Random3>25) System.out.println("True");
         else System.out.println("False");
 
+        //new - simplifies line 143/144
+        System.out.println(Random1 > 25 && Random2 > 25 && Random3 > 25);
+
+
         //Task-5
         System.out.println("Please enter a number between 1 and 7 (1 and 7 included)");
         int dayOfTheWeekNumber = input.nextInt();
@@ -195,12 +199,20 @@ public class Homework07 {
             System.out.println("Number entered is ZERO");
         }
 
+        //new - simplifies Task 6
+        if(inputNumber == 0) System.out.println("Number is zero");
+        System.out.println(inputNumber > 0 ? "Number is positive" : "Number is negative");
+        System.out.println(inputNumber % 2 == 0 ? "Number is EVEN" : "Number is ODD");
+
         //Task-7
         System.out.println("Please enter your 3 exam results");
         int gradeAverage = ((input.nextInt() + input.nextInt() + input.nextInt())/3);
 
         if(gradeAverage>=70)System.out.println("YOU PASSED!");
         else System.out.println("YOU FAILED!");
+
+        //new simplifies line 211-212
+        System.out.println(gradeAverage >= 70 ? "YOU PASSED" : "YOU FAILED");
 
         //Task-8
 
