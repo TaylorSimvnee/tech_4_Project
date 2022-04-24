@@ -13,6 +13,13 @@ public class TreeSetPractice {
 
         System.out.println(numbers);
 
+        TreeSet<String> names = new TreeSet<>();
+        names.add("John");
+        names.add("Joe");
+        names.add("Alex");
+        names.add("ali");
+
+        System.out.println(names);
 
     }
 }
