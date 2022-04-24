@@ -19,6 +19,7 @@ public class NumbersCollection {
         numbers1[1] = 2; // [1, 2, 0]
         numbers1[2] = 3; // [1, 2, 3]
 
+
         System.out.println(Arrays.toString(numbers1));
 
 
