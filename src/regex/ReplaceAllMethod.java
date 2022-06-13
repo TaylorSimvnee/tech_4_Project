@@ -17,8 +17,9 @@ public class ReplaceAllMethod {
 
 
         str = str.replaceAll("[0-9]", " ");
-        System.out.println("After: " + str2);
+        System.out.println("After: " + str);
 
+        System.out.println("ab110c045d".replaceAll("[^0-9]",""));
 
 
     }
