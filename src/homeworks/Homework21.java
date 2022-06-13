@@ -115,16 +115,24 @@ public class Homework21 {
     }
 
     public static void main(String[] args) {
-        //Method tests
+        System.out.println("Task-1");
         fizzBuzz1(5);
         fizzBuzz1(30);
+
+        System.out.println("Task-2");
         System.out.println(fizzBuzz2(5));
         System.out.println(fizzBuzz2(30));
+
+        System.out.println("Task-3");
         System.out.println(findSumNumbers("ab110c045d"));
         System.out.println(findSumNumbers("abc123dsfk"));
+
+        System.out.println("Task-4");
         System.out.println(findBiggestNumber("abc^"));
         System.out.println(findBiggestNumber("a1bf4 n6"));
         System.out.println(findBiggestNumber("ab110jd34jdfh245"));
+
+        System.out.println("Task-5");
         System.out.println(countSequenceOfCharacters("abc"));
         System.out.println(countSequenceOfCharacters("abbcca"));
         System.out.println(countSequenceOfCharacters("aaAAa"));
