@@ -39,23 +39,24 @@ public class Homework21 {
      */
 
     public static int findSumNumbers(String str){
-        String s = "";
+//        int sum = 0; // container to hold sum of numbers
+//        String temp = "0"; // container to hold String format of the numbers
+//        for (int i = 0; i < str.length(); i++){
+//            if (Character.isDigit(str.charAt(i))) temp += str.charAt(i); // checking if the current char is digit
+//            else { // else if current char is letter ...
+//                sum += Integer.parseInt(temp); // ... then add to the sum of the digits found prior to letter
+//                temp = "0"; // reset the String container back to empty
+//            }
+//        }return sum + Integer.parseInt(temp);
+
         int sum = 0;
 
-        for (int i = 0; i < str.length()-1; i++) {
-            if (Character.isDigit(str.charAt(i))){
-                if (i < str.length()-1 && Character.isDigit(str.charAt(i+1))){
-                    s += str.charAt(i);
-
-                }
-                else {
-                    s += str.charAt(i);
-                    sum += Integer.parseInt(s);
-                    s = "";
-                }
-            }
+        str = str.replaceAll("[^0-9]+", " ").trim();
+        String[] arr = str.split(" ");
+        for (String s : arr) {
+            sum += Integer.parseInt(s);
         }
-     return sum;
+        return sum;
     }
 
     /**
@@ -66,25 +67,14 @@ public class Homework21 {
      */
 
     public static int findBiggestNumber(String str){
-        int biggest = 0;
-        String s = "";
+        int max = Integer.MIN_VALUE;
 
-        for (int i = 0; i < str.length(); i++) {
-            if (Character.isDigit(str.charAt(i))){
-                if (i < str.length()-1 && Character.isDigit(str.charAt(i+1))){
-                    s += str.charAt(i);
-
-                }
-                else {
-                    s += str.charAt(i);
-                 if (Integer.parseInt(s)> biggest) {
-                     biggest = Integer.parseInt(s);
-                 }
-                    s = "";
-                }
-            }
+        str = str.replaceAll("[^0-9]+", " ").trim();
+        String[] arr = str.split(" ");
+        for (String s : arr) {
+            if(Integer.parseInt(s)> max) max = Integer.parseInt(s);
         }
-        return biggest;
+        return max;
     }
 
     /**
