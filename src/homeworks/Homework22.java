@@ -1,7 +1,6 @@
 package homeworks;
 
 import java.util.Arrays;
-import java.util.function.Predicate;
 
 public class Homework22 {
     public static void main(String[] args) {
@@ -10,8 +9,22 @@ public class Homework22 {
 
         System.out.println("\nTask2\n");
         System.out.println(fibonacciSeries2(8));
-    }
+        System.out.println(fibonacciSeries2(0));
+        try {
+            System.out.println(fibonacciSeries2(-5));
+        }catch (Exception e){ }
 
+        System.out.println("\nTask3\n");
+
+        System.out.println("\nTask4\n");
+        System.err.println(isPowerOf3(0));
+        System.err.println(isPowerOf3(1));
+        System.err.println(isPowerOf3(2));
+        System.err.println(isPowerOf3(3));
+        System.err.println(isPowerOf3(81));
+
+//        System.out.println("\nTask5\n");
+    }
     // ------------------👾 Task 1 👾------------------\\
 
     public static int[] fibonacciSeries1(int n) {
@@ -36,9 +49,24 @@ public class Homework22 {
 
     // ------------------👾 Task 3 👾------------------\\
 
-    public static int[] findUniques(int[] a, int[] b){
-        if(a.length == 0 || b.length == 0) return new int[0];
-        int i = 0;
-        while ()
+//    public static int[] findUniques(int[] a, int[] b){
+//        if(a.length == 0 || b.length == 0) return new int[0];
+//        int i = 0;
+////        while ()
+//    }
+
+    // ------------------🌾 Task 4 🌾------------------\\
+
+    public static boolean isPowerOf3(int i){
+        int powerOf3 = 1, base = 1;
+        for (int j = 0; j <= i; j++) {
+            powerOf3 *=3;
+            if (powerOf3 == i || base == i) return true;
+        }
+        return false;
     }
+
+    // ------------------👾 Task 5 👾------------------\\
+
+
 }
