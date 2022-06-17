@@ -78,11 +78,9 @@ public class Homework22 {
 
         int i = 0;
         for (Integer o : k) {
-            u[i] = o;
-            i++;
+            u[i++] = o;
         }
         return u;
-
     }
 
     // ------------------🌾 Task 4 🌾------------------\\
