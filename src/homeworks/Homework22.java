@@ -2,7 +2,9 @@ package homeworks;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.TreeSet;
+import java.util.stream.Collectors;
 
 public class Homework22 {
     public static void main(String[] args) {
@@ -19,6 +21,8 @@ public class Homework22 {
         }
 
         System.out.println("\nTask3\n");
+        System.out.println(Arrays.toString(findUniques(new int[]{1, 2, 3, 4}, new int[]{3, 4, 5, 5})));
+        System.out.println(Arrays.toString(findUniques(new int[]{8,9}, new int[]{9,8,9})));
 
         System.out.println("\nTask4\n");
         System.out.println(isPowerOf3(0));
@@ -38,12 +42,12 @@ public class Homework22 {
 
     public static int[] fibonacciSeries1(int n) {
         int[] series = new int[n];
-        int sum, num1 = 1, num2 = 0;
+        int sum = 0, num1 = 1, num2 = 0;
         for (int i = 0; i < n; i++) {
+            series[i] = sum;
             sum = num1 + num2;
             num1 = num2;
             num2 = sum;
-            series[i] = sum;
         }
         return series;
     }
@@ -60,8 +64,24 @@ public class Homework22 {
 
     public static int[] findUniques(int[] a, int[] b){
         if(a.length == 0 || b.length == 0) return new int[0];
+        List<Integer> g = Arrays.stream(a).boxed().collect(Collectors.toList());
+        List<Integer> f = Arrays.stream(b).boxed().collect(Collectors.toList());
+        ArrayList<Integer> k = new ArrayList<>();
 
+        for (Integer num : g) {
+           if (!f.contains(num) & !k.contains(num)) k.add((num));
+        }
+        for (Integer num : f) {
+            if (!g.contains(num) && !k.contains(num)) k.add((num));
+        }
+        int[] u = new int[k.size()];
 
+        int i = 0;
+        for (Integer o : k) {
+            u[i] = o;
+            i++;
+        }
+        return u;
     }
 
     // ------------------🌾 Task 4 🌾------------------\\
