@@ -64,21 +64,21 @@ public class Homework22 {
 
     public static int[] findUniques(int[] a, int[] b){
         if(a.length == 0 || b.length == 0) return new int[0];
-        List<Integer> g = Arrays.stream(a).boxed().collect(Collectors.toList());
-        List<Integer> f = Arrays.stream(b).boxed().collect(Collectors.toList());
-        ArrayList<Integer> k = new ArrayList<>();
+        List<Integer> listA = Arrays.stream(a).boxed().collect(Collectors.toList());
+        List<Integer> listB = Arrays.stream(b).boxed().collect(Collectors.toList());
+        ArrayList<Integer> combined = new ArrayList<>();
 
-        for (Integer num : g) {
-           if (!f.contains(num) & !k.contains(num)) k.add((num));
+        for (Integer num : listA) {
+           if (!listB.contains(num) & !combined.contains(num)) combined.add((num));
         }
-        for (Integer num : f) {
-            if (!g.contains(num) && !k.contains(num)) k.add((num));
+        for (Integer num : listB) {
+            if (!listA.contains(num) && !combined.contains(num)) combined.add((num));
         }
-        int[] u = new int[k.size()];
+        int[] u = new int[combined.size()];
 
         int i = 0;
-        for (Integer o : k) {
-            u[i++] = o;
+        for (Integer num : combined) {
+            u[i++] = num;
         }
         return u;
     }
